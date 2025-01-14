@@ -156,6 +156,7 @@ dmypy.json
 /cifar_100/datasets/**/*.png
 /tiny_imagenet/tiny-imagenet-200/**/*.png
 /tiny_imagenet/tiny-imagenet-200/**/*.JPEG
+/tiny_imagenet/tiny-imagenet-200/**/*.txt
 
 *.7z
 
@@ -172,3 +173,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 cifar_10/submission.csv
+cifar_100/cifar-100-python/
+cifar_100/backup/
