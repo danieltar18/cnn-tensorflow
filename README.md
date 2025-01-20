@@ -135,8 +135,6 @@ This repository includes implementations of CNN architectures for a variety of d
 
 ## Conclusion
 
-This repository shows how MLPs can be used for a variety of data types. While architectures like CNNs and RNNs may perform better for specific tasks, working with MLPs is a great way to learn about neural network design and implementation.
-
 Feel free to explore the projects and adapt the code for your own datasets. Contributions and suggestions are welcome!
 
-Next Repository will be CNN-s!:)
+Next Repository will be RNN-s!:)
