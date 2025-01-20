@@ -37,12 +37,13 @@ For GPU support on Windows, I recommend using [Anaconda](https://www.anaconda.co
 
 ### MNIST
 
-The MNIST dataset, a classic benchmark for image recognition tasks, was used to train an MLP model. A low-level TensorFlow implementation with 1 hidden layer (784 neurons) achieved impressive results.
+The MNIST dataset, a classic benchmark for image recognition tasks, was used to train a shallow CNN model (only one CNN layer with 8 kernel), that was built from scratch using low-level Keras/TensorFlow.
 
 **Model Performance:**
 - Accuracy (Stratified KFold, 5 splits): **97.4%**
 
 **A Sample Image after second CNN layer filters Visualization:**
+
 `Depth Slice` means: Applying the n-th filter on the image
 
 <p align="center">
@@ -56,8 +57,7 @@ Dataset source: [Yann LeCun's MNIST Database](http://yann.lecun.com/exdb/mnist/)
 
 ### CIFAR-10
 
-For the CIFAR-10 dataset, I explored TensorFlow's capabilities for handling image data, following the best practices outlined in [this tutorial](https://www.tensorflow.org/tutorials/load_data/images).  
-I built a shallow Convolutional Neural Network with 6 Conv2D Layer, BatchNormalization and Dropouts.
+For the CIFAR-10 dataset, I explored TensorFlow's capabilities for handling image data, following the best practices outlined in [this tutorial](https://www.tensorflow.org/tutorials/load_data/images). I built a shallow Convolutional Neural Network with 6 Conv2D Layer, BatchNormalization and Dropouts.
 
 **Model Performance:**
 - Accuracy (Stratified KFold, 5 splits): **86.49%**
@@ -72,6 +72,7 @@ I built a shallow Convolutional Neural Network with 6 Conv2D Layer, BatchNormali
 ![Predictions](cifar_10/accurate_predictions.png)
 
 My Kaggle Notebook: [CIFAR-10 with CNN Network](https://www.kaggle.com/code/dnieltar/cifar-10-with-cnn-network)
+
 Dataset source: [Kaggle - CIFAR-10](https://www.kaggle.com/competitions/cifar-10) or [Toronto Edu - CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) 
 
 ---
@@ -80,6 +81,7 @@ Dataset source: [Kaggle - CIFAR-10](https://www.kaggle.com/competitions/cifar-10
 
 First and foremost, I tried to build a deeper and wider Convolutional Neural Network with BatchNormalization, Dropout and MaxPooling layers. Furthermore, based on some studies/researches I implemented CosineDecay as optimizer with a warmup option. 
 To be honest, the model was "thriving" till 65%, val_loss ~1.6, although it platued after all. I am convinced that, It would be beneficial to build a deeper model and follow the ConvNext model(s) architecture. 
+
 It's a well-know fact that fine-tuning a state-of-the-art model could be valuable. Fine-tuning [ConvNextBase](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ConvNeXtBase) model excluding top for 10 epoch and later the last 50 layer was a crucial step in my project. Finally the model reached 70-80% top-1 accuracy.
 
 **Model Performance:**
@@ -87,7 +89,7 @@ It's a well-know fact that fine-tuning a state-of-the-art model could be valuabl
 - Top-1 Accuracy with fine-tuned ConvNextBase (Stratified KFold, 3 splits): **~75.31%**
 - Top-1 Accuracy with fine-tuned ConvNextBase on Test Set: **~91.04%**
 
-**Grad-CAM Heatmap on a Sample Image - CNN Network from scratch:**
+**Grad-CAM Heatmap on a Sample Image - CNN Network with Sequential API:**
 
 <p align="center">
   <img src="cifar_100/gradcam_img.png" alt="Grad-CAM Image">
@@ -105,6 +107,7 @@ It's a well-know fact that fine-tuning a state-of-the-art model could be valuabl
 ![Wrong Predictions](cifar_100/wrong_predictions_test_set.png)
 
 My Kaggle Notebook: [Fine-Tuning ConvNext for CIFAR-100](https://www.kaggle.com/code/dnieltar/fine-tuning-convnext-for-cifar-100)
+
 Dataset source: [Toronto - Edu](https://www.cs.toronto.edu/%7Ekriz/cifar.html)
 
 ---
