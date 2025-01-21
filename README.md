@@ -31,7 +31,7 @@ For GPU support on Windows, I recommend using [Anaconda](https://www.anaconda.co
    Windows: pip install tensorflow==2.10.1
    Ubuntu: pip install tensorflow==2.17.0 
    ```
-3. Launch Jupyter Notebook or VS code:
+3. Launch Jupyter Notebook or VS code (Fine-tuning were made on Kaggle Notebooks)
 
 ## Project Highlights
 
