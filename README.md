@@ -115,7 +115,7 @@ Dataset source: [Toronto - Edu](https://www.cs.toronto.edu/%7Ekriz/cifar.html)
 ### Tiny-ImageNet
 
 Tiny ImageNet is a smaller subset of the ImageNet dataset designed for quick prototyping and experimentation. It is widely used in deep learning research and education due to its manageable size and complexity.
-I did some research and tried to build a ConvNext Neural network based on the documentations, although I didn't have enough capacity to pretrain a model from scratch. That's why I utilized ConvNextBase from keras.applications for fine-tuning. 
+I did some research and tried to build a ConvNext Neural network based on the documentations, although I didn't have enough capacity to pretrain a model from scratch. That's why I utilized [ConvNextBase](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ConvNeXtBase) from keras.applications for fine-tuning. 
 
 The fine-tuned model achieved Top-1 Accuracy: **87%** 
 
