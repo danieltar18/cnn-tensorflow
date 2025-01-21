@@ -1,6 +1,6 @@
-# Convolutional Neural Networks
+# Convolutional Neural Networks - Image Classification
 
-This repository chronicles my journey into exploring the powerful capabilities of TensorFlow/Keras for convolutional neural networks (CNNs). It serves as a practical implementation hub for building and experimenting with CNN architectures across a variety of datasets, showcasing their application in image classification and segmentation tasks.
+This repository chronicles my journey into exploring the powerful capabilities of TensorFlow/Keras for convolutional neural networks (CNNs). It serves as a practical implementation hub for building and experimenting with CNN architectures across a variety of datasets, showcasing their application in image classification tasks.
 
 ## About the Project
 
