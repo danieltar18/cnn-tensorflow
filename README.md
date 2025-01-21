@@ -114,7 +114,23 @@ Dataset source: [Toronto - Edu](https://www.cs.toronto.edu/%7Ekriz/cifar.html)
 
 ### Tiny-ImageNet
 
-[In Progress]
+Tiny ImageNet is a smaller subset of the ImageNet dataset designed for quick prototyping and experimentation. It is widely used in deep learning research and education due to its manageable size and complexity.
+I did some research and tried to build a ConvNext Neural network based on the documentations, although I didn't have enough capacity to pretrain a model from scratch. That's why I utilized ConvNextBase from keras.applications for fine-tuning. The fine-tuned model achieved  Top-1 Accuracy: **87%** 
+
+**ConvNextBase model fine-tuning on Tiny ImageNet**
+
+<p align="center">
+  <img src="tiny_imagenet/finetuning.png" alt="ConvNextBase Fine-Tuning">
+</p>
+
+**Accurate and Wrong predictions on Validation Set - with fine-tuned ConvNextBase**
+
+![Accurate Predictions](tiny_imagenet/accurate_val_predictions.png)
+![Wrong Predictions](tiny_imagenet/wrong_val_predictions.png)
+
+It is important to note that the "misclassified" labels are closely related to the true labels or appears as well in the picture, as illustrated within the red square. Specifically, the fine-tuned model identified bikinis in the image, whereas the true label was sunglasses.
+
+Dataset source: [Stanford - CS231n ZIP](http://cs231n.stanford.edu/tiny-imagenet-200.zip)
 
 ---
 
