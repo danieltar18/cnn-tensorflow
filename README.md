@@ -28,7 +28,8 @@ For GPU support on Windows, I recommend using [Anaconda](https://www.anaconda.co
 
 2. Install the required dependencies:
    ```
-   pip install tensorflow==2.10.1
+   Windows: pip install tensorflow==2.10.1
+   Ubuntu: pip install tensorflow==2.17.0 
    ```
 3. Launch Jupyter Notebook or VS code:
 
